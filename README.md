@@ -108,9 +108,14 @@ Now you can build and start server using next commands:
 
 You can create more apps the same way like in example below. In this example we need 3 apps: `header`, `products`, `cart`.
 
-## Fetch microfrontends on the back-end
+## When to use
 
-We can use back-end technologies to concat our apps [together](./back-end-fetch/README.md)
+## Put apps together
+
+1. [Fetch on back-end](./back-end-fetch/README.md)
+2. [iFrames]()
+3. [Fetch with JavaScript]()
+4. [WebComponents]()
 
 ## Notes
 
