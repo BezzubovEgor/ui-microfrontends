@@ -1,0 +1,25 @@
+{
+  "name": "ui-microfrontends",
+  "version": "1.0.0",
+  "description": "implementations of microfrontends",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ui",
+    "microfrontends",
+    "microfrontend",
+    "service",
+    "microservice",
+    "ui-microservice",
+    "ui-microservices",
+    "micro",
+    "frontend",
+    "frontends"
+  ],
+  "author": "BezzubovEgor",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
