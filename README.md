@@ -162,10 +162,10 @@ Now we can host several app on the same page.
 
 ## Put apps together
 
-1. [Fetch on back-end](./back-end-fetch/README.md)
-2. [iFrames](./iframes/README.md)
-3. [Fetch with JavaScript](./js/README.md)
-4. [WebComponents](./webcomponents/README.md)
+1. [Fetch on back-end](./back-end-fetch)
+2. [iFrames](./iframes)
+3. [Fetch with JavaScript](./js)
+4. [WebComponents](./webcomponents)
 
 ## Notes
 
