@@ -83,13 +83,26 @@ You need build and start all apps, you also can specify port for aps using env v
 
     cd header
     npm run build
-    npm run babel
     set PORT=3000 && npm run start:prod
 
 Also you can start other apps the same way. Then you need to change urls that we passed to the `getContents` function.
 
 ``` js
 getContents('http://localhost:3000'),
+```
+
+But if we start apps we will have error that app can't load js files. To fix it we need to build our microfronts by this way, we should set `PUBLIC_URL` environment variable:
+
+    set PUBLIC_URL=http://path-to-microfront/&&npm run build
+
+Next step is the avoid of clashing in shared spaces. We need to change ids of blocks to render mocrofronts, you need to change your templates and `src/index.js` of each microservise:
+
+```html
+<div id="header-root">
+```
+
+```js
+ReactDOM.render(<App />, document.getElementById('header-root'));
 ```
 
 Thats all!

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Microfrontends</title>
+
+  <div data-microfront="/header"></div>
+  <div data-microfront="/products"></div>
+  <div data-microfront="/cart"></div>
+</head>
+
+<body>
+  <script>
+    function loadMicrofront(element) {
+      fetch(element.dataset.microfront)
+        .then(function(res) { return res.text(); })
+        .then(function(text) {
+          element.innerHTML = text;
+          [].forEach.call(element.querySelectorAll('script'), function (nonExecutableScript) {
+            const script = document.createElement("script");
+            if (nonExecutableScript.src) {
+              script.src = nonExecutableScript.src;
+            }
+            script.setAttribute("type", "text/javascript");
+            script.innerHTML = nonExecutableScript.innerHTML;
+            document.body.appendChild(script);
+            nonExecutableScript.parentNode.removeChild(nonExecutableScript);
+          })
+        })
+        .catch(function(err) { console.error(err); })
+    }
+    document.querySelectorAll('[data-microfront]').forEach(loadMicrofront);
+  </script>
+</body>
+
+</html>
