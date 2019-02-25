@@ -7,5 +7,4 @@ class Header extends HTMLElement {
         ReactDOM.render(<App />, this.createShadowRoot());
     }
 }
-console.log('microfrontend-header');
 window.customElements.define('microfrontend-header', Header);
