@@ -7,5 +7,5 @@ class Products extends HTMLElement {
         ReactDOM.hydrate(<App />, this.createShadowRoot());
     }
 }
-console.log('microfrontend-header');
+
 window.customElements.define('microfrontend-products', Products);
