@@ -8,5 +8,4 @@ class Cart extends HTMLElement {
     }
 }
 
-console.log('microfrontend-cart')
 window.customElements.define('microfrontend-cart', Cart);

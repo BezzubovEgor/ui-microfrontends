@@ -23,16 +23,7 @@ Also we need install `express`, some template engine for example `hbs`:
 Create `server.js` on the root of your `root` project, we need to fetch all apps into one page:
 
 ```js
-[const express = require('express');
-const server = express();
-
-server.set('view engine', 'hbs');
-
-server.get('/', (req, res) => res.render('index');
-const port = process.env.PORT || 8080;
-server.listen(port, () => {
-    console.log(`Homepage listening on port port`);
-});](const express = require('express');
+const express = require('express');
 const server = express();
 const request = require('request');
 
@@ -59,7 +50,7 @@ const getContents = (url) => new Promise((resolve, reject) => {
 const port = process.env.PORT || 8080;
 server.listen(port, () => {
   console.log(`Homepage listening on port port`);
-});)
+});
 ```
 
 > You also can use html imports, but it will be deprceated soon.
