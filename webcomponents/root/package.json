@@ -8,7 +8,11 @@
     "start:header": "cd ../header&&set PUBLIC_URL=http://localhost:3001&&npm run build&&set PORT=3001&&npm run start:prod",
     "start:products": "cd ../products&&set PUBLIC_URL=http://localhost:3002&&npm run build&&set PORT=3002&&npm run start:prod",
     "start:cart": "cd ../cart&&set PUBLIC_URL=http://localhost:3003&&npm run build&&set PORT=3003&&npm run start:prod",
-    "start:root": "node server.js"
+    "start:root": "node server.js",
+    "installAll": "npm install && run-p installAll:*",
+    "installAll:header": "cd ../header && npm install",
+    "installAll:products": "cd ../products && npm install",
+    "installAll:cart": "cd ../cart && npm install"
   },
   "author": "",
   "license": "MIT",
